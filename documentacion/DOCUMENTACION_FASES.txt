@@ -1,0 +1,909 @@
+================================================================================
+DOCUMENTACIÓN DE PROCESOS
+================================================================================
+
+PROYECTO: Ecommerce de Dotaciones (Laravel + MySQL + API REST)
+
+CONTEXTO DEL PROYECTO:
+Estamos construyendo un ecommerce profesional de dotaciones/uniformes con manejo de inventario avanzado por lonas.
+
+OBJETIVO:
+Crear una API REST profesional que permita:
+- productos
+- variantes (talla/color)
+- imágenes
+- categorías
+- inventario por lonas
+- carrito
+- órdenes
+- pagos
+- envíos
+- devoluciones
+- usuarios con roles
+- cupones
+- notificaciones
+
+STACK / HERRAMIENTAS:
+Backend:
+- Laravel
+- PHP
+- MySQL = http://localhost:8080 / (root . root)
+- phpMyAdmin
+- Frontend: Vue.js
+
+================================================================================
+ACTUALIZACIÓN TECNOLÓGICA DEL PROYECTO
+======================================
+
+ARQUITECTURA GENERAL
+
+Frontend:
+
+* Vue 3
+* Vue Router
+* Axios
+* Pinia (manejo de estado)
+* Vite
+* Tailwind CSS
+* SweetAlert2
+* Vue Toastification
+* Chart.js
+* Vue ChartJS
+
+Backend:
+
+* Laravel 12
+* PHP 8+
+* Laravel Sanctum
+* API REST
+
+Base de Datos:
+
+* MySQL
+
+Infraestructura:
+
+* Docker Desktop
+* Docker Compose
+
+Control de Versiones:
+
+* Git
+* GitHub
+
+Testing:
+
+* Thunder Client
+* Postman
+
+---
+
+## TECNOLOGÍAS FRONTEND
+
+Framework:
+
+* Vue 3
+
+Bundler:
+
+* Vite
+
+Routing:
+
+* Vue Router
+
+Estado Global:
+
+* Pinia
+
+Consumo API:
+
+* Axios
+
+Diseño:
+
+* Tailwind CSS
+
+Alertas:
+
+* SweetAlert2
+
+Notificaciones:
+
+* Vue Toastification
+
+Iconos:
+
+* Lucide Icons
+  o
+* Heroicons
+
+Dashboard:
+
+* Chart.js
+* Vue ChartJS
+
+Tablas:
+
+* DataTables
+  o
+* Tabulator
+
+Manejo Formularios:
+
+* Vue Forms
+* Validaciones Frontend
+
+---
+
+## CONEXIÓN FRONTEND ↔ BACKEND
+
+Base URL API:
+
+http://127.0.0.1:8000/api
+
+Comunicación:
+
+Vue
+↓
+Axios
+↓
+Laravel API
+↓
+MySQL
+
+Endpoints consumidos:
+
+Auth
+Productos
+Variantes
+Categorías
+Imágenes
+Lonas
+Inventario
+Carrito
+Órdenes
+Pagos
+Envíos
+Devoluciones
+Cupones
+Notificaciones
+Dashboard
+
+---
+
+## INTEGRACIONES EXTERNAS
+
+PASARELA DE PAGOS
+
+Proveedor:
+
+* Wompi
+
+Uso:
+
+* Checkout
+* Pagos con tarjeta
+* PSE
+* Nequi
+* Bancolombia
+
+Funciones:
+
+* Crear transacción
+* Consultar estado
+* Webhooks
+* Confirmación automática
+* Reembolsos
+
+---
+
+## CORREOS ELECTRÓNICOS
+
+Laravel Mail
+
+Proveedor de pruebas:
+
+* Mailtrap
+
+Proveedor producción:
+
+* Gmail SMTP
+  o
+* Brevo
+  o
+* SendGrid
+
+Correos:
+
+* Bienvenida
+* Nueva orden
+* Pago aprobado
+* Pago rechazado
+* Envío generado
+* Entrega realizada
+* Devolución
+* Recuperación contraseña
+
+---
+
+## AUTENTICACIÓN SOCIAL
+
+Google OAuth
+
+Herramientas:
+
+* Google Cloud Console
+* OAuth 2.0
+
+Funciones:
+
+* Login Google
+* Registro automático
+* Vinculación cuentas
+
+---
+
+## FACTURACIÓN
+
+Generación PDF
+
+Librerías Laravel:
+
+* DomPDF
+  o
+* Snappy PDF
+
+Funciones:
+
+* Factura PDF
+* Descarga
+* Envío correo
+* Historial facturas
+
+---
+
+## WHATSAPP BUSINESS
+
+Proveedor:
+
+* Meta Developers
+
+Funciones:
+
+* Confirmación orden
+* Pago aprobado
+* Envío creado
+* Entrega realizada
+* Devolución
+
+---
+
+## ALMACENAMIENTO DE IMÁGENES
+
+Proveedor:
+
+* Cloudinary
+
+Funciones:
+
+* Subida imágenes
+* Optimización automática
+* CDN global
+* Redimensionamiento
+* Compresión
+
+---
+
+## MAPAS Y DIRECCIONES
+
+Proveedor:
+
+* Google Maps Platform
+
+Servicios:
+
+* Places API
+* Geocoding API
+* Maps API
+
+Funciones:
+
+* Autocompletar direcciones
+* Geolocalización
+* Validación dirección
+* Mapa checkout
+
+---
+
+## ANALÍTICA
+
+Google Analytics 4
+
+Eventos:
+
+* Producto visto
+* Agregar carrito
+* Checkout iniciado
+* Compra realizada
+* Conversión
+
+---
+
+## SEO
+
+Herramientas:
+
+* Meta Tags
+* Open Graph
+* Sitemap XML
+* Robots TXT
+* Schema.org
+
+Objetivo:
+
+* Posicionamiento Google
+* Compartir redes sociales
+* Mejor indexación
+
+---
+
+## SEGURIDAD
+
+Backend:
+
+* Laravel Sanctum
+* Middleware
+* Rate Limiting
+* Validaciones Laravel
+
+Frontend:
+
+* Protección XSS
+* Sanitización datos
+
+Infraestructura:
+
+* HTTPS
+* SSL
+* Backups
+* Logs
+
+---
+
+## DESPLIEGUE PRODUCCIÓN
+
+Backend:
+
+Opciones:
+
+* Hostinger VPS
+* DigitalOcean
+* Contabo
+* AWS
+
+Frontend:
+
+Opciones:
+
+* Vercel
+* Netlify
+* Hostinger
+
+Base de Datos:
+
+* MySQL Producción
+
+Dominio:
+
+Ejemplo:
+
+[www.dotacionesempresa.com](http://www.dotacionesempresa.com)
+
+---
+
+## MONITOREO
+
+Backend:
+
+* Logs Laravel
+
+Frontend:
+
+* Logs Vue
+
+Servicios:
+
+* Uptime Monitor
+* Google Analytics
+* Lighthouse
+
+---
+
+## OBJETIVO FINAL DEL PROYECTO
+
+Sistema Ecommerce Profesional Completo:
+
+✔ Gestión de productos
+✔ Inventario por lonas
+✔ Variantes talla/color
+✔ Carrito
+✔ Cupones
+✔ Órdenes
+✔ Pagos online
+✔ Envíos
+✔ Devoluciones
+✔ Dashboard administrativo
+✔ Correos automáticos
+✔ Login Google
+✔ Facturación PDF
+✔ WhatsApp Business
+✔ Analytics
+✔ SEO
+✔ Producción
+✔ Seguridad
+✔ Escalabilidad empresarial
+
+
+Testing:
+- Thunder Client / Postman
+
+Infraestructura:
+- Docker Desktop
+
+Control de versiones:
+- Git
+- GitHub
+
+PROYECTO LOCAL:
+ruta: [AQUI TU RUTA]
+ejemplo:
+C:\Users\SENA\ecomerce-dotaciones
+
+BASE DE DATOS:
+nombre: ecommerce
+
+-----------------------------------
+CHECKLIST PREVIO (SIEMPRE HACER)
+-----------------------------------
+
+[ ] 1. abrir Docker Desktop
+
+[ ] 2. levantar contenedores
+docker ps
+
+si no están:
+docker-compose up -d
+
+[ ] 3. entrar al proyecto
+cd C:\Users\SENA\ecomerce-dotaciones
+
+[ ] 4. levantar laravel
+php artisan serve
+
+esperado:
+http://127.0.0.1:8000
+
+[ ] 5. verificar migraciones
+php artisan migrate:status
+
+[ ] 6. limpiar cache
+php artisan optimize:clear
+
+[ ] 7. revisar rutas
+php artisan route:list --path=api
+
+[ ] 8. probar conexión bd
+php artisan tinker
+
+dentro:
+DB::connection()->getPdo();
+
+salir:
+exit
+
+[ ] 9. abrir Thunder Client
+
+[ ] 10. probar endpoint rápido
+GET localhost:8000/api/categorias
+
+-----------------------------------
+ENDPOINTS ACTUALES
+-----------------------------------
+
+Auth:
+POST /api/register
+POST /api/login
+GET /api/profile
+
+Productos:
+POST /api/products
+GET /api/productos/{id}
+
+Variantes:
+POST /api/variantes
+
+Imágenes:
+POST /api/imagenes
+GET /api/productos/{id}/imagenes
+
+Categorías:
+POST /api/categorias
+GET /api/categorias
+
+Dotaciones:
+POST /api/dotaciones
+GET /api/dotaciones
+
+-----------------------------------
+ROADMAP DEL PROYECTO
+(Marca OK cuando terminemos)
+-----------------------------------
+
+------BACKEND 
+
+FASE 1 Productos
+[OK] crear
+[OK] listar
+[OK] editar
+[OK] eliminar
+
+FASE 2 Variantes
+[OK] crear
+[OK] listar
+[OK] editar
+[OK] eliminar
+
+FASE 3 Imágenes
+[OK] crear
+[OK] listar
+[OK] editar
+[OK] eliminar
+
+FASE 4 Categorías
+[OK] crear
+[OK] listar
+[OK] editar
+[OK] eliminar
+
+FASE 5 Inventario
+5.1 Dotaciones
+[OK] crear
+[OK] listar
+[OK] editar
+[OK] eliminar
+
+5.2 Lonas
+[OK] crear
+[OK] listar
+[OK] buscar
+[OK] editar
+[OK] desactivar
+
+5.3 Lona Tallas
+[OK] crear
+[OK] actualizar
+[OK] eliminar
+[OK] listar
+
+5.4 Historial
+[OK] listar
+[OK] registrar manual
+[OK] filtros
+
+FASE 6 Carrito
+[OK] crear carrito
+[OK] listar carrito
+[OK] agregar item
+[OK] actualizar cantidad
+[OK] eliminar item
+[OK] vaciar carrito
+
+FASE 7 Órdenes
+[OK]crear orden 
+[OK]listar órdenes
+[OK]ver detalle de orden
+[OK]cambiar estado
+[# no probar aun ]cancelar orden
+
+FASE 8 Pagos
+[OK] registrar
+[OK] aprobar
+[OK] rechazar
+[OK] reembolso
+
+FASE 9 Envíos
+[OK] crear envío
+[OK] tracking / guía
+[OK] actualizar estado
+[OK] entregado
+[#] fallido
+[OK] relaciones con órdenes
+
+FASE 10 Devoluciones
+[OK ] crear devolución
+[OK ] aprobar/rechazar
+[OK ] motivo
+[OK ] evidencia
+[OK ] cambiar estado orden
+[OK] reembolso automático
+
+FASE 11 Usuarios + Direcciones
+[OK] auth
+[OK] roles
+[OK] CRUD direcciones
+
+FASE 12 Cupones
+[OK] crear
+[OK] validar
+[OK] aplicar
+
+FASE 13 Notificaciones
+[OK] crear
+[OK] listar
+[OK] marcar leído
+
+FASE 14 Control Dashboard Admin
+
+[OK] métricas generales
+[OK] ventas totales
+[OK] órdenes por estado
+[OK] productos más vendidos
+[OK] stock bajo
+
+
+----------FRONEND 
+
+FASE F1 Configuración Vue
+
+[ ] crear proyecto Vue
+[ ] instalar router
+[ ] instalar axios
+[ ] configurar API
+
+FASE F2 Layout
+
+[ ] Navbar
+[ ] Footer
+[ ] Sidebar Admin
+
+FASE F3 Home
+
+[ ] banner
+[ ] productos destacados
+[ ] categorías
+
+FASE F4 Catálogo
+
+[ ] listar productos
+[ ] filtros
+[ ] búsqueda
+
+FASE F5 Producto
+
+[ ] detalle
+[ ] imágenes
+[ ] variantes
+[ ] agregar carrito
+
+FASE F6 Carrito
+
+[ ] listar
+[ ] actualizar
+[ ] eliminar
+[ ] cupón
+
+FASE F7 Checkout
+
+[ ] dirección
+[ ] resumen
+[ ] crear orden
+
+FASE F8 Login / Registro
+
+[ ] login
+[ ] registro
+[ ] logout
+
+FASE F9 Perfil
+
+[ ] datos usuario
+[ ] direcciones
+[ ] historial órdenes
+
+FASE F10 Dashboard Admin
+
+[ ] métricas
+[ ] productos
+[ ] órdenes
+[ ] usuarios
+[ ] cupones
+[ ] notificaciones
+
+------INTEGRACIONES
+FASE I1 Pagos Wompi
+
+[ ] crear cuenta Wompi
+[ ] obtener llaves públicas
+[ ] obtener llaves privadas
+[ ] generar aceptación de términos
+[ ] crear checkout
+[ ] iniciar transacción
+[ ] validar transacción
+[ ] webhook Wompi
+[ ] aprobar pago automáticamente
+[ ] rechazar pago automáticamente
+[ ] registrar pagos en BD
+[ ] pruebas sandbox
+[ ] pruebas producción
+
+FASE I2 Correos Automáticos
+
+[ ] configurar SMTP
+[ ] Mailtrap pruebas
+[ ] correo bienvenida
+[ ] correo nueva orden
+[ ] correo pago aprobado
+[ ] correo pago rechazado
+[ ] correo envío creado
+[ ] correo pedido entregado
+[ ] correo devolución creada
+[ ] correo recuperación contraseña
+
+FASE I3 Google Login
+
+[ ] crear proyecto Google Cloud
+[ ] configurar OAuth
+[ ] obtener Client ID
+[ ] obtener Secret Key
+[ ] login con Google
+[ ] registro automático
+[ ] vincular cuentas existentes
+[ ] logout Google
+
+FASE I4 Facturación
+
+[ ] generar factura PDF
+[ ] datos empresa
+[ ] datos cliente
+[ ] detalle productos
+[ ] impuestos
+[ ] total factura
+[ ] descargar PDF
+[ ] enviar PDF por correo
+[ ] guardar factura
+
+FASE I5 WhatsApp
+
+[ ] Meta Developers
+[ ] WhatsApp Business
+[ ] token API
+[ ] mensaje nueva orden
+[ ] mensaje pago aprobado
+[ ] mensaje envío creado
+[ ] mensaje entregado
+[ ] mensaje devolución
+
+FASE I6 Cloudinary
+
+[ ] crear cuenta
+[ ] obtener credenciales
+[ ] subir imágenes
+[ ] optimización automática
+[ ] eliminación imágenes
+[ ] transformación imágenes
+[ ] CDN imágenes
+
+FASE I7 Google Maps
+
+[ ] API Key
+[ ] autocompletar dirección
+[ ] geolocalización
+[ ] mapa checkout
+[ ] validar direcciones
+[ ] cálculo ubicación
+
+FASE I8 Analytics
+
+[ ] Google Analytics 4
+[ ] eventos ecommerce
+[ ] compras
+[ ] productos vistos
+[ ] agregar carrito
+[ ] checkout iniciado
+[ ] conversiones
+[ ] reportes
+
+FASE I9 SEO
+
+[ ] meta tags
+[ ] Open Graph
+[ ] sitemap.xml
+[ ] robots.txt
+[ ] schema.org
+[ ] URLs amigables
+[ ] SEO productos
+[ ] SEO categorías
+
+FASE I10 Seguridad
+
+[ ] rate limiting
+[ ] CORS producción
+[ ] HTTPS
+[ ] protección XSS
+[ ] protección CSRF
+[ ] validaciones extra
+[ ] logs errores
+[ ] backups BD
+
+FASE I11 Deploy Backend
+
+[ ] servidor producción
+[ ] configurar dominio
+[ ] configurar SSL
+[ ] variables entorno
+[ ] migraciones producción
+[ ] almacenamiento producción
+[ ] supervisión procesos
+
+FASE I12 Deploy Frontend
+
+[ ] build producción
+[ ] configurar dominio
+[ ] variables entorno
+[ ] conexión API producción
+[ ] optimización assets
+[ ] pruebas finales
+
+FASE I13 Monitoreo
+
+[ ] logs backend
+[ ] logs frontend
+[ ] monitoreo errores
+[ ] alertas
+[ ] rendimiento
+[ ] uptime
+
+FASE I14 Optimización Final
+
+[ ] cache consultas
+[ ] cache API
+[ ] lazy loading
+[ ] optimizar imágenes
+[ ] optimizar consultas
+[ ] auditoría Lighthouse
+[ ] pruebas carga
+
+FASE I15 Lanzamiento
+
+[ ] pruebas completas
+[ ] revisión seguridad
+[ ] revisión SEO
+[ ] revisión pagos
+[ ] revisión correos
+[ ] revisión envíos
+[ ] revisión facturación
+[ ] publicación oficial
+
+
+-----------------------------------
+ESTADO ACTUAL
+-----------------------------------
+Estamos en:
+FASE 14 → Control Dashboard Admin
+Siguiente paso:
+Frontend 
+
+
+ÚLTIMO TRABAJO REALIZADO:
+[Fase 14]
+
+PROBLEMAS O PENDIENTES:
+[ninguno]
+
+------ GITHUB
+
+git status
+git add .
+git commit -m "Avance del día"
+git push origin main

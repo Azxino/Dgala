@@ -1,0 +1,188 @@
+
+
+---
+
+# GUÍA COMPLETA PARA LEVANTAR EL PROYECTO EN UNA PC NUEVA
+
+---
+
+# 1. INSTALAR REQUISITOS (UNA SOLA VEZ EN LA PC)
+
+Antes de empezar deben tener instalado:
+
+* Docker Desktop
+* Git
+* Node.js (versión LTS)
+
+Verificación:
+
+```bash
+docker --version
+git --version
+node -v
+```
+
+---
+
+# 2. CLONAR EL PROYECTO
+
+Abrir terminal (PowerShell o CMD) y ejecutar:
+
+```bash
+git clone https://github.com/TU_USUARIO/TU_REPO.git
+```
+
+Entrar al proyecto:
+
+```bash
+cd ecommerce_dgala
+```
+
+---
+
+# 3. ENTRAR A LA CARPETA DE DOCKER
+
+```bash
+cd docker
+```
+
+---
+
+# 4. LEVANTAR TODO EL SISTEMA
+
+Ejecutar:
+
+```bash
+docker compose up -d --build
+```
+
+Esperar entre 30 segundos y 2 minutos.
+
+Esto levanta:
+
+* MySQL
+* Laravel
+* phpMyAdmin
+* Importación automática de base de datos (si está configurado)
+
+---
+
+# 5. VERIFICAR QUE TODO ESTÉ CORRIENDO
+
+```bash
+docker ps
+```
+
+Debe mostrar:
+
+* laravel_app
+* mysql_db
+* phpmyadmin
+
+---
+
+# 6. ABRIR LOS SERVICIOS EN EL NAVEGADOR
+
+Laravel:
+
+```
+http://localhost:8000
+```
+
+phpMyAdmin:
+
+```
+http://localhost:8080
+```
+
+---
+
+# 7. LEVANTAR FRONTEND (VUE)
+
+Abrir otra terminal y ejecutar:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Abrir en navegador:
+
+```
+http://localhost:5173
+```
+
+---
+
+# 8. LEVANTAR DASHBOARD (SI EXISTE)
+
+```bash
+cd dashboard
+npm install
+npm run dev
+```
+
+---
+
+# RESUMEN FINAL (LO MÁS IMPORTANTE)
+
+En una PC nueva SOLO deben hacer:
+
+```bash
+git clone https://github.com/TU_USUARIO/TU_REPO.git
+cd ecommerce_dgala/docker
+docker compose up -d --build
+```
+
+Luego:
+
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+---
+
+# ESTRUCTURA DEL PROYECTO EN GITHUB
+
+Debe verse así:
+
+```
+ecommerce_dgala/
+│
+├── backend/        (Laravel)
+├── frontend/       (Vue)
+├── dashboard/
+├── docker/
+│   └── docker-compose.yml
+├── database/
+│   └── ecommerce.sql
+└── README.md
+```
+
+---
+
+# SUBIR CAMBIOS A GITHUB (PARA TI)
+
+Solo tú lo haces así:
+
+```bash
+git add .
+git commit -m "update project setup"
+git push origin main
+```
+
+---
+
+# NOTA IMPORTANTE PARA TODOS
+
+* No instalar MySQL manualmente
+* No instalar Apache o XAMPP
+* No configurar base de datos manualmente
+* Todo funciona con Docker
+
+---
+
+Si quieres, en el siguiente paso te puedo dejar un README.md listo para copiar y pegar profesional para GitHub.
